@@ -1,0 +1,237 @@
+body {
+margin: 0;
+padding: 0;
+font-family: 'PT Sans', sans-serif;
+font-size: 13px;
+line-height: 24px;
+font-weight: 400;
+color: #000000;
+background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style-type: none;
+}
+.top-nav {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #293449;
+}
+.logo {
+  background-color: #ee3643;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 5px 0 rgba(181, 41, 51, 0.76); /*не пойму по макету цвет тени какой должен быть*/
+}
+}
+.search {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;  /* не пойму как цвет текста плейсхолдера поменять*/
+  background-color: #293449;
+  border: none;
+}
+.main-navigation {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  background-color: #32425c;
+}
+.icon {
+  opacity: 0.3;
+}
+.order {
+background-color: #63a63e;
+width: 150px;
+text-align: center;
+}
+.description {
+  font-family: 'Cuprum', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: #ee3643;
+}
+.address{
+  font-family: 'Cuprum', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+.lightblue{
+  background-color: #f3f7f9;
+}
+.border-phone {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  border: 3px solid #ffffff;
+}
+.login {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  background-color: #ffffff;
+  padding: 14px;
+  text-align: center;
+ /*залезли друг на друга, потом выстроим в флексах?*/
+}
+h1, h2 {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+section. p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+.list {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  list-style-type: ; /*маркеры списка делать через background-image?*/
+}
+.red-button {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ee3643;
+  padding: 13px;
+  border: none;
+}
+.footer{
+  font-family: 'Cuprum', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  background-color: #32425c;
+}
+.beige {
+  color: #ffd180;
+}
+.bottom {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #293449;
+}
+.icon-footer {
+  text-align: center;
+  vertical-align: middle;
+  background-color: #212a3a;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.modal {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+}
+input {
+  font-family: 'Pt Sans', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+.underline {
+  text-decoration: underline;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+}
+.breadcrumb {
+  font-family: 'Pt sans', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.h1 {
+  color: #32425c;
+  background-color: #f2f6f8;
+}
+.h2 {
+  font-family: 'Pt sans', sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+   }
+.button-form {
+  font-family: 'Pt sans', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  width: 140px;
+  height: 38px;
+}
+.price {
+  font-family: 'Pt sans', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+  width: 141px;
+  height: 38px;
+  background-color: #ee3643;
+}
+.old-price {
+  font-family: 'Pt sans', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  color: #999999;
+  text-decoration: line-through;
+}
+.item {
+  font-family: 'Pt sans', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+.buy {
+  font-family: 'Cuprum', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  background-color: #63a63e;
+  border: none;
+  box-shadow: 0 3px 0 #367315;
+  text-transform: uppercase;
+}
+.bookmark {
+  font-family: 'Cuprum', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: 3px solid #63a63e;
+  background-color: #ffffff;
+}
+.white-button {
+  font-family: 'Cuprum', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  background-color: #ffffff;
+}
+.modal-background {
+  background-color: #f1f1f1;
+}
