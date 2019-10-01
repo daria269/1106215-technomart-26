@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт - каталог</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link  href="normalize.css" rel="stylesheet">
     <link  href="style.css" rel="stylesheet">
   </head>
@@ -11,7 +12,7 @@
 <header>
 <div class='top-nav'>
   <a href='index.html'>  <img src='img/logo-technomart.svg' alt='Техномарт' width="109px" height="19px" titlе="На главную" class='logo'>  </a>
-<label> <img src="img/icon-search.svg"  width="17px" height="17px" alt='Техномарт' class="icon"> <input type="search" placeholder="Поиск:" class="search"> </label>
+<label> <img src="img/icon-search.svg"  width="17px" height="17px" alt='Техномарт' class="icon"> <input type="search" placeholder="Поиск:"> </label>
  <ul>
    <li> <a href="#"> <img src='img/icon-bookmark.svg' width='14px' height='16px' class='icon'> Закладки </a> </li>
    <li> <a href="#"> <img src='img/icon-cart.svg' width='15px' height='15px' class='icon'> Корзина </a> </li>
@@ -33,7 +34,7 @@
   <a href='#logout'> <img src="img/icon-logout.svg" width="20px" height="17px" alt='Выйти' title="Выйти">
 </a>
 </p>
-<ul>
+<ul class='profile-list'>
   <li class='underline'> <a href="#">Мои заказы</a></li>
   <li  class='underline'>  <a href="#">Личный кабинет </a> </li>
 </ul>
@@ -58,11 +59,11 @@
   <a href='#'>Инструмент </a>
   <a>Перфораторы </a>
 </div>
-<h1 class='h1'> Перфораторы </h1>
 <section>
-  <div>
-    <h2 class='h2'> Производители </h2>
-    <form>
+<h1 class='catalog-title'> Перфораторы </h1>
+  <form class='filter-list'>
+      <div>
+      <h2 class='filter-title'> Производители </h2>
   <ul>
     <li>
       <label><input type="checkbox" checked> <span> Bosh </span></label>
@@ -82,7 +83,7 @@
    </ul>
  </div>
  <div>
-   <h2 class='h2'> Питание </h2>
+   <h2 class='filter-title'> Питание </h2>
    <ul>
      <li>
        <label> <input type="radio" checked> Аккумуляторные </label>
@@ -94,6 +95,7 @@
  </div>
  <button type='submit' class='button-form'> Показать </button>
  </form>
+</section>
    <section>
       <article>
          <img src="img/perf_1.jpg" alt="Перфоратор BOSH BFG 3000"  width='218px' height='170px' title='BFG 3000'>
