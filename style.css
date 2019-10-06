@@ -41,7 +41,17 @@ a {
 .logo {
   background-color: #ee3643;
   text-align: center;
+  vertical-align: middle; /*не  работает ?? */
   width: 220px;
+  height: 47px;
+  box-shadow: inset 0px -5px 0 0 rgba(0,0,0,0.24);
+}
+.logo-footer {
+  background-color: #ee3643;
+  text-align: center;
+  vertical-align: middle;
+  width: 220px;
+  height: 68px;
   box-shadow: inset 0px -5px 0 0 rgba(0,0,0,0.24);
 }
 input[type="search"] {
@@ -51,7 +61,8 @@ input[type="search"] {
   background: transparent;
   border: none;
 }
-::-webkit-input-placeholder {color:#ffffff;;}
+
+::-webkit-input-placeholder {color:#ffffff;}
 ::-moz-placeholder          {color:#ffffff;}
 :-moz-placeholder           {color:#ffffff;}
 :-ms-input-placeholder      {color:#ffffff;}
@@ -65,6 +76,7 @@ input[type="search"] {
 }
 .icon {
   opacity: 0.3;
+  margin: auto 17px;
 }
 .order {
 background-color: #63a63e;
@@ -77,31 +89,49 @@ text-align: center;
   font-size: 16px;
   line-height: 23px;
   color: #ee3643;
+  margin-left: 45px;
+
 }
 .address{
   font-family: 'Cuprum', sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
+  text-align: center;
 }
 .lightblue{
   background-color: #f3f7f9;
+  width: 940px;
+  margin: 0 auto;
 }
 .border-phone {
+  width: 270px;
+  height: 45px;
   font-family: 'Cuprum', sans-serif;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
   border: 3px solid #ffffff;
+  text-align: center;
 }
 .login {
   font-family: 'Cuprum', sans-serif;
   font-size: 21px;
   line-height: 21px;
   background-color: #ffffff;
-  padding: 14px;
   text-align: center;
- /*залезли друг на друга, потом выстроим в флексах?*/
+  width: 299px;
+  height: 45px;
+}
+  .login-reg {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 21px;
+    line-height: 21px;
+    background-color: #ffffff;
+    text-align: center;
+    width: 150px;
+    height: 45px;
+    margin-left: 10px;
 }
 h1, h2 {
   font-family: 'Cuprum', sans-serif;
@@ -118,7 +148,6 @@ h1, h2 {
   font-family: 'Cuprum', sans-serif;
   font-size: 18px;
   line-height: 20px;
-  list-style-type: ; /*маркеры списка делать через background-image?*/
 }
 .red-button {
   font-family: 'Cuprum', sans-serif;
@@ -129,6 +158,7 @@ h1, h2 {
   background-color: #ee3643;
   padding: 13px;
   border: none;
+  border-radius: 3px;
 }
 .footer{
   font-family: 'Cuprum', sans-serif;
@@ -136,6 +166,7 @@ h1, h2 {
   line-height: 24px;
   color: #ffffff;
   background-color: #32425c;
+  height: 193px;
 }
 .beige {
   color: #ffd180;
@@ -154,6 +185,7 @@ h1, h2 {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  margin-right: 5px;
 }
 .modal {
   font-family: 'Cuprum', sans-serif;
@@ -172,6 +204,7 @@ h1, h2 {
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
+  margin-right: 30px;
 }
 .breadcrumb {
   font-family: inherit;
@@ -206,6 +239,7 @@ h1, h2 {
   width: 141px;
   height: 38px;
   background-color: #ee3643;
+  border-radius: 3px;
 }
 .old-price {
   font-family: inherit;
@@ -215,7 +249,7 @@ h1, h2 {
   color: #999999;
   text-decoration: line-through;
 }
-.item {
+.item-text {
   font-family: inherit;
   font-weight: bold;
   font-size: 18px;
@@ -258,4 +292,131 @@ h1, h2 {
 }
 .modal-background {
   background-color: #f1f1f1;
+}
+.search {
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.top-nav {
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+.user-nav{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-left: auto;
+  width: 433px;
+  padding: 0;
+  justify-content: space-between;
+}
+.top-nav-container {    /* не разобралась с полями*/
+  width: 940px;
+  margin: 0 auto;
+}
+.login-container {
+  display: flex;
+  flex-direction: row;
+  width: 940px;
+  height: 158px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-list {
+  display: flex;
+  flex-direction: row;
+  width: 281px;
+}
+.main-navigation {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  box-shadow: inset 0 -5px 0 0 #293449;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.section-container {
+  display: flex;
+  flex-direction: row;
+  width: 940px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.footer {
+  width: 940px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.container-footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.white-nav {
+  width: 550px;
+  display: flex;
+  justify-content: space-between;
+}
+.beige-list {
+  width: 525px;
+  display: flex;
+  justify-content: space-between;
+  color: #ffd180;
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  width: 940px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-icon {
+  display: flex;
+}
+.reserved {
+  width: 230px;
+}
+.container-profile {
+  display: flex;
+  flex-direction: column;
+}
+.container-main {
+  display: flex;
+  width: 940px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.filter-list {
+  width: 220px;
+}
+.item-card {
+  width: 220px;
+  /* height: 318px;*/
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+ margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+
 }
