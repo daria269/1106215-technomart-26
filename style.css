@@ -46,14 +46,15 @@ a {
   width: 940px;
 }
 .logo img{
-  padding: 13px;
+  padding: 10px;
+
 }
 .logo {
   background-color: #ee3643;
   text-align: center;
   width: 220px;
   /* height: 47px; растягивает весь нав */
-  box-shadow: inset 0px -5px 0 0 rgba(0,0,0,0.24);
+  box-shadow: 0px 5px 0 0 #b52933;
 
 }
 .logo-footer {
@@ -70,7 +71,9 @@ input[type="search"] { /*само поле ввода больше чет не �
   line-height: 18px;
   background: transparent;
   border: none;
-  padding: 13px 0;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  width: 100%;
 
 }
 
@@ -88,7 +91,10 @@ input[type="search"] { /*само поле ввода больше чет не �
 }
 .icon {
   opacity: 0.3;
-  margin: auto 17px;
+  margin-top: 12px;
+  margin-right: 13px;
+  margin-bottom: 11px;
+  margin-left: 17px;
 }
 
 
@@ -98,7 +104,8 @@ input[type="search"] { /*само поле ввода больше чет не �
   font-size: 16px;
   line-height: 23px;
   color: #ee3643;
-  margin-left: 45px;
+  margin-left: 53px;
+  padding-top: 0px;
 
 }
 .address{
@@ -115,37 +122,47 @@ input[type="search"] { /*само поле ввода больше чет не �
 
 }
 .border-phone {
-  width: 270px;
+  width: 264px;
   height: 45px;
   font-family: 'Cuprum', sans-serif;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
   border: 3px solid #ffffff;
-  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.icon-phone {
+  margin-right: 41px;
+  margin-left: 13px;
 }
 .login {
   font-family: 'Cuprum', sans-serif;
   font-size: 21px;
   line-height: 21px;
   background-color: #ffffff;
-  text-align: center;
   width: 121px;
-  max-height: 45px;
-  padding: 10px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
+}
+.icon-login{
+margin: auto 14px;
 }
   .login-reg {
     font-family: 'Cuprum', sans-serif;
     font-size: 21px;
     line-height: 21px;
     background-color: #ffffff;
-    text-align: center;
     width: 150px;
-    max-height: 45px;
-    padding: 10px;
-    margin-left: 10px;
-}
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 h1, h2 {
   font-family: 'Cuprum', sans-serif;
   font-size: 30px;
@@ -308,6 +325,7 @@ h1, h2 {
 }
 .search {
  width: 270px;
+ display: flex;
 }
 
 .top-nav {
@@ -317,39 +335,50 @@ h1, h2 {
   min-width: 940px;
 }
 .user-nav{
+  padding-left: 0;
   display: flex;
   flex-direction: row;
   margin: 0;
-  margin-left: auto;
   align-items: center;
-  width: 433px;
+  width: 450px;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
+.user-nav-li {
+  padding-right: 26px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+}
 .top-nav-container {
   width: 100%;
+  background-color: #293449;
   height: 42px
   margin: 0 auto;
   display: flex;
 }
-.wrapper {
-  background-color: #293449;
-  width: 100%;
-}
+
 .login-container {
   display: flex;
   flex-direction: row;
   width: 940px;
-  height: 158px;
+  height: 112px;
   margin: 0 auto;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  padding-top: 46px;
 }
 .profile-list {
+  padding: 0px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 281px;
+  justify-content: space-between;
+  margin: 0;
 }
 .main-navigation {
   display: flex;
@@ -436,11 +465,11 @@ h1, h2 {
   margin-right: 0px;
   margin-bottom: 20px;
   margin-left: 10px;
-
 }
+
 .order {
 background-color: #63a63e;
 width: 150px;
 text-align: center;
-padding: 15px;
+padding: 12px 21px;
 }
