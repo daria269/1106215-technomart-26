@@ -79,7 +79,7 @@ input[type="search"] {
   padding-top: 13px;
   padding-bottom: 12px;
   width: 100%;
-
+  outline: none;
 }
 
 ::-webkit-input-placeholder {color:#ffffff;}
@@ -97,14 +97,10 @@ input[type="search"] {
   padding-right: 20px;
 }
 .main-navigation a  {
-  padding: 21px 28px;
+  padding: 20px 30px;
 }
 .icon {
-  opacity: 0.3;
-  margin-top: 12px;
-  margin-right: 13px;
-  margin-bottom: 11px;
-  margin-left: 17px;
+
 }
 
 
@@ -125,12 +121,13 @@ input[type="search"] {
   color: #32425c;
   text-align: center;
 }
+
 .lightblue{
   background-color: #f3f7f9;
   width: 100%;
   margin: 0 auto;
-
 }
+
 .border-phone {
   width: 264px;
   height: 45px;
@@ -143,10 +140,12 @@ input[type="search"] {
   justify-content: flex-start;
   align-items: center;
 }
+
 .icon-phone {
   margin-right: 41px;
   margin-left: 13px;
 }
+
 .login {
   font-family: 'Cuprum', sans-serif;
   font-size: 21px;
@@ -157,11 +156,28 @@ input[type="search"] {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
 }
+
 .icon-login{
 margin: auto 14px;
+fill: #c5c5c5;
 }
+
+.login:hover {
+  color: #ee3643;
+}
+.login:active {
+  color:#c5c5c5;
+}
+
+.login:hover .icon-login {
+  fill: #32425c;
+}
+
+.login:active .icon-login{
+  fill: #c5c5c5;
+}
+
   .login-reg {
     font-family: 'Cuprum', sans-serif;
     font-size: 21px;
@@ -173,6 +189,14 @@ margin: auto 14px;
     align-items: center;
     justify-content: center;
   }
+  .login-reg:hover {
+    color: #ee3643;
+  }
+
+  .login-reg:active {
+    color: #c5c5c5;
+  }
+
 h1, h2 {
   font-family: 'Cuprum', sans-serif;
   font-size: 30px;
@@ -341,11 +365,30 @@ h1, h2 {
  width: 270px;
  display: flex;
 }
-.search:hover.icon-search {
+.search:hover .icon-search {
   fill: #ffffff;
 }
+.search-field {
+  padding-left: 49px;
+}
+.search-field:focus,
+.search-field:active{
+ background-color: #ffffff;
+}
+.search-field:focus .icon-search {
+  fill: #ee3643; /*не работает.
+   и
+    .search:focus .icon-search {
+    fill: #ee3643;
+     тоже не работает*/
+}
 .icon-search  {
-  fill: #ffffff;
+  margin-top: 12px;
+  margin-right: 13px;
+  margin-bottom: 11px;
+  margin-left: 17px;
+  fill: #6a7180;
+  position: absolute;
 }
 .search:hover,
 .user-nav-li:hover {
@@ -357,15 +400,31 @@ h1, h2 {
   fill: #ffffff;
 }
 .icon-bookmark{
-  fill: #ffffff;
+  margin-top: 12px;
+  margin-right: 13px;
+  margin-bottom: 11px;
+  margin-left: 17px;
+  fill: #6a7180;
 }
 .icon-cart {
-  fill: #ffffff;
+  margin-top: 12px;
+  margin-right: 13px;
+  margin-bottom: 11px;
+  margin-left: 17px;
+  fill: #6a7180;
 }
 
-.user-nav-li:activ {
+.user-nav-li:active {
   background-color: #161d29;
-  color: #ffffff 0.6;
+  color: #8b8e94;
+}
+.user-nav-li:active .icon-bookmark,
+.user-nav-li:active .icon-cart {
+  fill: #8b8e94;
+}
+.order:active {
+  background-color: #518534;
+  color: rgba(255, 255, 255, 0.5);
 }
 .top-nav {
   display: flex;
@@ -427,6 +486,14 @@ h1, h2 {
   align-items: center;
   justify-content: space-around;
 }
+.main-nav-a:hover {
+  background-color: #293449;
+}
+.main-nav-a:active {
+  background-color: #1d2739;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .section-container {
   display: flex;
   flex-direction: row;
