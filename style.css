@@ -61,15 +61,7 @@ a {
 .logo.activ {
   background-color: #ba2732;
 }
-}
-.logo-footer {
-  background-color: #ee3643;
-  text-align: center;
-  vertical-align: middle;
-  width: 220px;
-  height: 68px;
-  box-shadow: inset 0px -5px 0 0 rgba(0,0,0,0.24);
-}
+
 input[type="search"] {
   font-family: 'Cuprum', sans-serif;
   font-size: 17px;
@@ -398,17 +390,17 @@ h1, h2 {
 }
 .search-field {
   padding-left: 49px;
+  color: #ffffff;
+
 }
 .search-field:focus,
 .search-field:active{
  background-color: #ffffff;
+ color: #000000;
+
 }
-.search-field:focus .icon-search {
-  fill: #ee3643; /*не работает.
-   и
-    .search:focus .icon-search {
-    fill: #ee3643;
-     тоже не работает*/
+.search-field:focus + .icon-search {
+  fill: #ee3643;
 }
 .icon-search  {
   margin-top: 12px;
@@ -531,29 +523,58 @@ h1, h2 {
   padding-top: 82px;
   padding-bottom: 86px;
 }
+.container-footer-logo {
+  display: flex;
+  flex-direction: column;
+}
+.footer-address {
+  padding-left: 3px;
+}
+footer {
+  width: 100%;
+  background-color: #32425c;
 }
 .footer {
   width: 940px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
 }
+.logo-footer img {
+  padding: 20px 41px;}
+
+.logo-footer {
+  display: block;
+  background-color: #ee3643;
+  width: 220px;
+  height: 63px;
+  box-shadow: 0px 5px 0 0 #b52933;
+  margin-bottom: 38px;
+}
+
 .container-footer-nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .white-nav {
-  width: 550px;
+  width: 547px;
   display: flex;
   justify-content: space-between;
+  padding-left: 0;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 .beige-list {
-  width: 525px;
+  width: 524px;
   display: flex;
   justify-content: space-between;
   color: #ffd180;
+  padding-left: 0;
+  margin-top: 37px;
+
 }
 .bottom {
   display: flex;
