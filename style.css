@@ -149,7 +149,45 @@ input[type="search"] {
   align-items: center;
   justify-content: flex-start;
 }
+.login-name {
+  font-family: 'Cuprum', sans-serif;
+  font-size: 21px;
+  line-height: 21px;
+  background-color: #ffffff;
+  width: 299px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+.icon-logout {
+  padding: 10px;
+  fill: #c5c5c5;
+}
+.icon-user {
+  margin: 0 12px;
+  fill: #c5c5c5;
+}
+.user:hover .icon-user{
+  fill: #32425c;
+}
+.user:active .icon-user{
+  color: #000000;
+  opacity: 0.3;
+}
+.user:active{
+  color: #000000;
+  opacity: 0.3;
+}
 
+.logout:hover .icon-logout {
+  fill: #32425c;
+}
+.logout:active .icon-logout {
+  color: #000000;
+  opacity: 0.3;
+}
 .icon-login{
 margin: auto 14px;
 fill: #c5c5c5;
@@ -282,23 +320,93 @@ h1, h2 {
 .map {
   display: none;
 }
-.underline {
+.underline-orders {
   text-decoration: underline;
   font-family: 'Cuprum', sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-left: 17px;
+  margin-top: 10px;
 }
+.underline-2 {
+  text-decoration: underline;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  margin-left: 0;
+  margin-top: 10px;
+}
+.underline-2 ::before {
+content: '';
+display: inline-block;
+vertical-align: middle;
+background-color: #32425c;
+height: 5px;
+width: 4px;
+border-radius: 50%;
+margin-right: 12px;
+margin-left: 0;
+}
+.underline-orders:hover,
+.underline-2:hover {
+  color: #ee3643;
+}
+.underline-orders:active,
+.underline-2:active {    /*почему hover к псевдоэлементу не применяется, а active применился??*/
+  color: #000000;
+  opacity: 0.3;
+}
+
 .breadcrumb {
   font-family: inherit;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 940px;
+  height: 60px;
+  margin: 0 auto;
+}
+.icon-home {
+  margin-right: 14px;
+}
+.crumb-catalog::before {
+  content: url('img/icon-right-small.svg');
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 18px;
+
+}
+
+.crumb-tools::before {
+  content: url('img/icon-right-small.svg');
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 15px;
+  margin-left: 16px;
+}
+
+.crumb-drill::before {
+  content: url('img/icon-right-small.svg');
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 17px;
+  margin-left: 18px;
 }
 .catalog-title {
   color: #32425c;
   background-color: #f2f6f8;
+  height: 90px;
+  padding-left: 30px;
+  width: 910px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 .filter-title {
   font-family: inherit;
@@ -387,6 +495,7 @@ h1, h2 {
 }
 .search:hover .icon-search {
   fill: #ffffff;
+  opacity: 1;
 }
 .search-field {
   padding-left: 49px;
@@ -407,7 +516,8 @@ h1, h2 {
   margin-right: 13px;
   margin-bottom: 11px;
   margin-left: 17px;
-  fill: #6a7180;
+  fill: #ffffff;
+  opacity: 0.5;
   position: absolute;
 }
 .search:hover,
@@ -416,22 +526,25 @@ h1, h2 {
 }
 
 .user-nav-li:hover .icon-bookmark,
-.user-nav-li:hover .icon-cart {
+.cart:hover .icon-cart {
   fill: #ffffff;
+  opacity: 1;
 }
 .icon-bookmark{
   margin-top: 12px;
   margin-right: 13px;
   margin-bottom: 11px;
   margin-left: 17px;
-  fill: #6a7180;
+  fill: #ffffff;
+  opacity: 0.5;
 }
 .icon-cart {
   margin-top: 12px;
   margin-right: 13px;
   margin-bottom: 11px;
   margin-left: 17px;
-  fill: #6a7180;
+  fill: #ffffff;
+  opacity: 0.5;
 }
 
 .user-nav-li:active {
@@ -459,7 +572,7 @@ h1, h2 {
   margin: 0;
   align-items: stretch;
   width: 450px;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
 }
 
@@ -469,7 +582,15 @@ h1, h2 {
   display: flex;
   align-items: center;
   margin: 0;
-
+}
+.cart { /*в styleguide нет эффекта при наведении на корзину в каталоге*/
+  padding-right: 25px;
+  padding-left: 2px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  background-color: #ee3643;
 }
 .top-nav-container {
   width: 100%;
@@ -495,7 +616,7 @@ h1, h2 {
   flex-direction: row;
   align-items: center;
   width: 281px;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0;
 }
 .main-navigation {
