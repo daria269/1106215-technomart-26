@@ -58,7 +58,7 @@ a {
 .logo:hover {
   background-color: #ca2c37;
 }
-.logo.activ {
+.logo:active {
   background-color: #ba2732;
 }
 
@@ -443,7 +443,13 @@ margin-left: 0;
   width: 140px;
   height: 38px;
 }
-
+.button-form:hover {
+  cursor: pointer;
+}
+.button-form:active,
+.button-form:focus {
+  outline: none;
+}
 .checkbox{
    display: flex;
    justify-content: flex-start;
@@ -723,6 +729,8 @@ input[type="radio"]:checked ~ .radio__icon::after {
  width: 270px;
  display: flex;
 }
+
+
 .search:hover .icon-search {
   fill: #ffffff;
   opacity: 1;
@@ -996,7 +1004,12 @@ footer {
   border-bottom: #ee3643 1px  dotted;
   line-height: 18px;
 }
-.ul-sorting a:focus, /*или как сделать чтоб он был красным постоянно, если его выбираешь*/
+.ul-sorting a:hover {
+  color: #000000;
+  border-bottom: #ee3643 1px  solid;
+}
+
+.ul-sorting a:focus,
 .ul-sorting a:active  {
   color: #ee3643;
   border-bottom: none;
@@ -1020,10 +1033,12 @@ footer {
 .icon-dir {
   display: block;
   fill: #c5c5c5;
-  margin-left: 4px;
-  margin-right: 17px;
+  padding: 10px 17px 10px 0px;
 }
-
+.icon-dir:hover {
+  fill: #000000;
+  cursor: pointer;
+}
 
 .some-words {
   width: 940px;
@@ -1065,3 +1080,46 @@ height: 2px;
 width: 25px;
 margin-right: 6px;
  }
+.pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-left: 0;
+  list-style-type: none;
+}
+.page-number {
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  height: 36px;
+  width: 36px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+.page-next {
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  height: 36px;
+  width: 138px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.page-number:hover,
+.page-next:hover{
+  border-color: #bdc6ca;
+}
+.page-number:active,
+.page-next:active{
+border-color: #ee3643
+}
+.page-number:focus,
+.page-next:focus {
+  background-color: #ee3643;
+  border-color: #ee3643;
+  color: #ffffff;
+}
