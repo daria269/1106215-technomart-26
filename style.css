@@ -380,7 +380,7 @@ margin-left: 0;
   color: #ee3643;
 }
 .underline-orders:active,
-.underline-2:active {    /*почему hover к псевдоэлементу не применяется, а active применился??*/
+.underline-2:active {
   color: #000000;
   opacity: 0.3;
 }
@@ -451,16 +451,18 @@ margin-left: 0;
   font-size: 13px;
   line-height: 18px;
   background-color: #ffffff;
+  border-radius: 2px;
   border: 1px solid #e5e5e5;
   width: 140px;
   height: 38px;
 }
 .button-form:hover {
   cursor: pointer;
+  border-color: #bdc6ca;
 }
-.button-form:active,
-.button-form:focus {
+.button-form:active {
   outline: none;
+  background-color: #ee3643;
 }
 .checkbox{
    display: flex;
@@ -503,6 +505,7 @@ margin-left: 0;
   transform: translate(-50%,-50%) rotate(-45deg);
 }
 
+
 input[type="checkbox"]:checked ~ .checkbox__icon::after {
   display: block;
 }
@@ -532,6 +535,8 @@ input[type="checkbox"]:checked ~ .checkbox__icon::after {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+  {
+
 
 .radio__icon::after {
   display: none;
@@ -545,9 +550,9 @@ input[type="checkbox"]:checked ~ .checkbox__icon::after {
   border-radius: 50%;
 }
 
-input[type="radio"]:checked ~ .radio__icon::after {
+input[type="radio"]:checked ~ .radio__icon ::after {
   display: block;
-  background-color: #b5b5b5;
+  border-color: #c5c5c5;
 }
 
 .filter-list {
@@ -1136,16 +1141,9 @@ margin-right: 6px;
   justify-content: center;
   margin-right: 10px;
 }
-.page-number1 {
-  border: 1px solid #e5e5e5;
-  border-radius: 2px;
-  height: 36px;
-  width: 36px;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
+.active-page {
+border-color: #ee3643;
+background-color: #ee3643;
 }
 
 .page-next {
@@ -1160,11 +1158,11 @@ margin-right: 6px;
   text-transform: uppercase;
 }
 .page-number:hover,
-.page-next:hover{
+.page-next:hover {
   border-color: #bdc6ca;
 }
 .page-number:active,
-.page-next:active{
+.page-next:active {
 border-color: #ee3643
 }
 .page-number:focus,
@@ -1172,13 +1170,15 @@ border-color: #ee3643
   background-color: #ee3643;
   border-color: #ee3643;
   color: #ffffff;
+  outline: none;
 }
 
-.active-page{
+.active-page {
   background-color: #ee3643;
   border-color: #ee3643;
   color: #ffffff;
 }
+
 .white-nav li:hover {
   text-decoration: underline;
 }
