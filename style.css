@@ -64,14 +64,12 @@ a {
   width: 220px;
   box-shadow: 0px 5px 0 0 #b52933;
 }
-.logo:hover,
-.cart:hover {
+.logo:hover {
   background-color: #ca2c37;
 }
 .logo:active {
   background-color: #ba2732;
 }
-
 
 input[type="search"] {
   font-family: 'Cuprum', sans-serif;
@@ -102,6 +100,10 @@ input[type="search"] {
 .main-navigation a  {
   padding: 20px 30px;
 }
+.icon {
+
+}
+
 
 .description {
   font-family: 'Cuprum', sans-serif;
@@ -174,8 +176,8 @@ input[type="search"] {
   align-items: center;
 }
 .icon-logout {
+  padding: 10px;
   fill: #c5c5c5;
-  margin: 15px 14px 11px 12px;
 }
 .icon-user {
   margin: 13px 14px 14px 12px;
@@ -380,7 +382,7 @@ margin-left: 0;
   color: #ee3643;
 }
 .underline-orders:active,
-.underline-2:active {
+.underline-2:active {    /*почему hover к псевдоэлементу не применяется, а active применился??*/
   color: #000000;
   opacity: 0.3;
 }
@@ -451,18 +453,17 @@ margin-left: 0;
   font-size: 13px;
   line-height: 18px;
   background-color: #ffffff;
-  border-radius: 2px;
   border: 1px solid #e5e5e5;
   width: 140px;
   height: 38px;
 }
 .button-form:hover {
   cursor: pointer;
-  border-color: #bdc6ca;
+
 }
-.button-form:active {
+.button-form:active,
+.button-form:focus {
   outline: none;
-  background-color: #ee3643;
 }
 .checkbox{
    display: flex;
@@ -505,7 +506,6 @@ margin-left: 0;
   transform: translate(-50%,-50%) rotate(-45deg);
 }
 
-
 input[type="checkbox"]:checked ~ .checkbox__icon::after {
   display: block;
 }
@@ -535,8 +535,6 @@ input[type="checkbox"]:checked ~ .checkbox__icon::after {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-  {
-
 
 .radio__icon::after {
   display: none;
@@ -550,11 +548,9 @@ input[type="checkbox"]:checked ~ .checkbox__icon::after {
   border-radius: 50%;
 }
 
-input[type="radio"]:checked ~ .radio__icon ::after {
+input[type="radio"]:checked ~ .radio__icon::after {
   display: block;
-  border-color: #c5c5c5;
 }
-
 .filter-list {
   padding-left: 0;
 }
@@ -679,11 +675,9 @@ input[type="radio"]:checked ~ .radio__icon ::after {
   text-transform: uppercase;
   margin-bottom: 8px;
   padding: 0;
-  cursor: pointer;
 }
 .buy:hover {
   background-color: #5fbb2d;
-  cursor: pointer;
 }
 .buy:hover .icon-cart-buy{
   fill: #ffffff;
@@ -693,7 +687,6 @@ input[type="radio"]:checked ~ .radio__icon ::after {
   background-color: #518534;
   box-shadow: inset 0px -3px 0 0 #518534;
   outline: none;
-  cursor: pointer;
 }
 .buy:focus {
   outline: none;
@@ -718,25 +711,18 @@ input[type="radio"]:checked ~ .radio__icon ::after {
   background-color: #ffffff;
   color: #32425c;
   padding: 0;
-  cursor: pointer;
 }
 .bookmark:hover {
   border-color: #32425c;
-  cursor: pointer;
 }
 .bookmark:active {
   border-color: #c1c6ce;
-  color: #ffffff;
-  opacity: 0.6;
+  color: #32425c;
+  opacity: 0.3;
   outline: none;
-  cursor: pointer;
 }
 .bookmark:focus {
   outline: none;
-}
-.cart:active {
-  background-color: #ba2732;
-  opacity: 0.6;
 }
 .white-button {
   font-family: 'Cuprum', sans-serif;
@@ -793,7 +779,7 @@ input[type="radio"]:checked ~ .radio__icon ::after {
 }
 
 .user-nav-li:hover .icon-bookmark,
-.cart:hover .icon-cart {
+.user-nav-li:hover .icon-cart {
   fill: #ffffff;
   opacity: 1;
 }
@@ -820,8 +806,7 @@ input[type="radio"]:checked ~ .radio__icon ::after {
 }
 .user-nav-li:active .icon-bookmark,
 .user-nav-li:active .icon-cart {
-  fill: #ffffff;
-  opacity: 0.5;
+  fill: #8b8e94;
 }
 .order:active {
   background-color: #518534;
@@ -1079,10 +1064,7 @@ footer {
   fill: #000000;
   cursor: pointer;
 }
-.icon-dir:focus {
-  fill: #ee3643;
-  cursor: pointer;
-}
+
 .some-words {
   width: 940px;
   margin: 0 auto;
@@ -1141,11 +1123,6 @@ margin-right: 6px;
   justify-content: center;
   margin-right: 10px;
 }
-.active-page {
-border-color: #ee3643;
-background-color: #ee3643;
-}
-
 .page-next {
   border: 1px solid #e5e5e5;
   border-radius: 2px;
@@ -1158,11 +1135,11 @@ background-color: #ee3643;
   text-transform: uppercase;
 }
 .page-number:hover,
-.page-next:hover {
+.page-next:hover{
   border-color: #bdc6ca;
 }
 .page-number:active,
-.page-next:active {
+.page-next:active{
 border-color: #ee3643
 }
 .page-number:focus,
@@ -1170,15 +1147,7 @@ border-color: #ee3643
   background-color: #ee3643;
   border-color: #ee3643;
   color: #ffffff;
-  outline: none;
 }
-
-.active-page {
-  background-color: #ee3643;
-  border-color: #ee3643;
-  color: #ffffff;
-}
-
 .white-nav li:hover {
   text-decoration: underline;
 }
