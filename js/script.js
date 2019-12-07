@@ -19,7 +19,6 @@ divMap.onclick = function () {
  let closeMap = document.querySelector('.close-map'); /*  не работает кнопка закрыть */
  closeMap.onclick = function () {
    mapMini.style.overflow ='hidden' ;
-   divMap.style.overflow = 'hidden' ;
    console.log('нажата');
  };
 
@@ -27,5 +26,16 @@ let modal = document.querySelector('.modal');
 let writeBtn  = document.querySelector('.long-button');
 writeBtn.onclick = function () {
   modal.style.display = 'block';
+};
 
+let closeModal = document.querySelector('.close-button');
+closeModal.onclick = function () {
+  modal.style.display = 'none';
+};
+
+/* window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display ='none';
+  };
 }
+не работает */

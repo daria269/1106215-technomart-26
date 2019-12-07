@@ -77,8 +77,69 @@
 </div>
 </header>
 
-<main> main
+<main>
+  <section class='section-blocks'>
+    <div class='small-blocks'>
+
+    <div class='material-block'>
+      <div> Материалы
+      <label> <button class='btn-in-block'> На любой вкус </button> </label>
+    </div>
+      <div class='tin-paint'> <img  src='img/icon-1.svg' width='44' height='65'>
+
+    <img class='new-flag-block' src='img/new-flag.png'>
+     </div>
+    </div>
+
+    <div class='tools-block'>
+      <div> Инструмент
+      <label><button class='btn-in-block'> На все случаи </button></label>
+    </div>
+      <div class='drill-icon'> <img src='img/icon-2.svg' width='75' height='61'>
+     </div>
+    </div>
+
+    <div class='technic-block'>
+      <div> Техника
+      <label><button class='btn-in-block'> Для стройки </button></label>
+    </div>
+      <div class='technic-icon'> <img  src='img/icon-3.svg' width='78' height='62'>
+     </div>
+    </div>
+     </div>
+
+    <div class='dif-blocks'>
+
+      <div class='slider'>
+        <img src='#' width="620" height="266">
+      </div>
+
+      <div class='dif-small-blocks'>
+
+        <div class='sale-block'>
+          <div> Скидки 50%
+          <label><button class='btn-in-block'> На 350 товаров </button></label>
+        </div>
+          <div class='sale-cart-icon'> <img  src='img/icon-4.svg' width='59' height='72'>
+         </div>
+        </div>
+
+        <div class='delivery-block'>
+          <div> Доставка
+          <label><button class='btn-in-block'> Бесплатно </button></label>
+        </div>
+          <div class='delivery-icon'> <img  src='img/icon-5.svg' width='78' height='63'>
+         </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
 </main>
+
 <div class='section-container'>
 <section class='about'>
  <h2>Компания "Техномарт" </h2>
@@ -175,21 +236,28 @@
 </footer>
 
 <div class='modal'>
-  <button> <img src="img/icon-close.svg" width="21" height="21" title="Закрыть">
+  <div class='red-line'> </div>
+  <button class='close-button'> <img src="img/icon-close.svg" width="21" height="21" title="Закрыть">
   </button>
+
   <form class='write-us'>
-    <label> Ваше имя
+    <div class='container-input'>
+      <label> Ваше имя: <br>
     <input type="text" name="name" value="" placeholder="Имя Фамилия">
   </label>
-  <label> Ваш e-mail
+  <label> Ваш e-mail: <br>
     <input type="text"  name='email' value="" placeholder="email@example.com">
   </label>
-  <label> Текст письма
-    <input type="text" name='text' value="" placeholder="В свободной форме">
-  </label>
-  <button type='submit' class=red-button> Отправить </button>
+  </div>
+  <label class='text-field'> Текст письма: <br>
+    <textarea name='text'placeholder="В свободной форме"></textarea>
+</label>
+  <div class='btn-background'>
+  <button type='submit' class='red-button button-send'> Отправить </button>
+</div>
 </form>
 </div>
+
 <script src="js/script.js"> </script>
   </body>
 </html>
