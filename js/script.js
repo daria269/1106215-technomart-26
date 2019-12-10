@@ -11,25 +11,26 @@ close.addEventListener('click', function (evt) {
   buypopup.classList.remove('modal-cart-show');
 })
 */
-let divMap = document.querySelector('.divMap');
 let mapMini = document.querySelector('.map-mini');
-divMap.onclick = function () {
-  mapMini.style.overflow ='visible' ;
+let mapOpen = document.querySelector('.map-open');
+
+mapOpen.onclick = function() {
+  mapMini.style.overflow = 'visible';
 };
- let closeMap = document.querySelector('.close-map'); /*  не работает кнопка закрыть */
- closeMap.onclick = function () {
-   mapMini.style.overflow ='hidden' ;
-   console.log('нажата');
- };
+let closeMap = document.querySelector('.close-map');
+closeMap.onclick = function() {
+  mapMini.style.overflow = 'hidden';
+  console.log('нажата');
+};
 
 let modal = document.querySelector('.modal');
-let writeBtn  = document.querySelector('.long-button');
-writeBtn.onclick = function () {
+let writeBtn = document.querySelector('.long-button');
+writeBtn.onclick = function() {
   modal.style.display = 'block';
 };
 
 let closeModal = document.querySelector('.close-button');
-closeModal.onclick = function () {
+closeModal.onclick = function() {
   modal.style.display = 'none';
 };
 
