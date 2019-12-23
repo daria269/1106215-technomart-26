@@ -40,28 +40,29 @@ closeModal.onclick = function() {
   };
 }
 не работает */
-let sliderField =document.querySelector('.slider-field');
+
+let sliderField = document.querySelector('.slider-field');
 let leftButton = document.querySelector('.slide-left');
-let left = 0;
-let right= 0;
 let rightButton = document.querySelector('.slide-right');
 
+let left = 0;
+let frame = 620;
+
 leftButton.onclick = moveLeft;
+rightButton.onclick = moveRight;
 
 function moveLeft() {
-  left = left - 620;
-  if (left < -620) {
+  left = left - frame;
+  if (left < -frame) {
     left = 0;
   }
   sliderField.style.left = left + 'px';
 }
 
-// rightButton.onclick = moveRight;
-//
-// function moveRight() {
-//   right = right + 620;
-//   if (right > 620) {
-//     right = 0;
-//   }
-//   sliderField.style.right = right + 'px';
-// }
+function moveRight() {
+  left = left + frame;
+  if (left > 0) {
+    left = -frame;
+  }
+  sliderField.style.left = left + 'px';
+}
