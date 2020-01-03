@@ -44,6 +44,8 @@ closeModal.onclick = function() {
 let sliderField = document.querySelector('.slider-field');
 let leftButton = document.querySelector('.slide-left');
 let rightButton = document.querySelector('.slide-right');
+let slide1 = document.querySelector('.slide1');
+let slide2 = document.querySelector('.slide2');
 
 let left = 0;
 let frame = 620;
@@ -51,18 +53,32 @@ let frame = 620;
 leftButton.onclick = moveLeft;
 rightButton.onclick = moveRight;
 
-function moveLeft() {
-  left = left - frame;
-  if (left < -frame) {
-    left = 0;
-  }
-  sliderField.style.left = left + 'px';
+ function moveRight (){
+	let element = document.querySelector(".slider-field>div:first-child");
+  sliderField.appendChild(element);
 }
+function moveLeft (){
+	let element = document.querySelector(".slider-field>div:last-child"),
+  	firstElement = document.querySelector(".slider-field>div:first-child");
+	sliderField.insertBefore(element, firstElement);
+  element.style.transition = 'all ease 1s';
+}
+sliderField.style.transition = 'left 0.6s ease';
 
-function moveRight() {
-  left = left + frame;
-  if (left > 0) {
-    left = -frame;
-  }
-  sliderField.style.left = left + 'px';
-}
+
+//
+// function moveLeft() {
+//   left = left - frame;
+//   if (left < -frame) {
+//     // left = 0;
+//   }
+//   sliderField.style.left = left + 'px';
+// }
+//
+// function moveRight() {
+//   left = left + frame;
+//   if (left > 0) {
+//     left = -frame;
+//   }
+//   sliderField.style.left = left + 'px';
+// }
