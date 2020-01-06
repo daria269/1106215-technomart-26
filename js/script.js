@@ -82,3 +82,46 @@ sliderField.style.transition = 'left 0.6s ease';
 //   }
 //   sliderField.style.left = left + 'px';
 // }
+
+let deliveryBtn = document.getElementById('delivery-li');
+let guarantBtn = document.getElementById('guarantee-li');
+let creditBtn = document.getElementById('credit-li');
+let guarantDiv = document.querySelector('.guarantee');
+let deliveryDiv = document.querySelector('.delivery');
+let creditDiv = document.querySelector('.credit');
+
+let background = document.querySelector('.service-detail');
+
+deliveryBtn.onclick = showDelivery;
+guarantBtn.onclick = showGuarant;
+creditBtn.onclick = showCredit;
+
+function showDelivery () {
+  guarantDiv.style.display = 'none';
+  creditDiv.style.display = 'none';
+  deliveryDiv.style.display = 'block';
+  background.classList.remove('guarantee-icon');
+  background.classList.remove('credit-icon');
+  background.classList.add('delivery-icon');
+
+}
+
+function showGuarant () {
+
+  deliveryDiv.style.display = 'none';
+  creditDiv.style.display = 'none';
+  guarantDiv.style.display = 'block';
+  background.classList.remove('delivery-icon');
+  background.classList.remove('credit-icon');
+  background.classList.add('guarantee-icon');
+}
+
+function showCredit () {
+
+  deliveryDiv.style.display = 'none';
+  guarantDiv.style.display = 'none';
+  creditDiv.style.display = 'block';
+  background.classList.remove('delivery-icon');
+  background.classList.add('credit-icon');
+  background.classList.remove('guarantee-icon');
+}
