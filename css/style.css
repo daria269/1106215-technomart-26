@@ -319,6 +319,7 @@ h1, h2 {
 .long-button {
   width: 100%;
 }
+
 .section-blocks {
   margin: 59px auto 0;
   width: 940px;
@@ -513,15 +514,15 @@ h1, h2 {
 .slide1 {
   position: relative;
   transition: all ease 1s;
-
 }
+
 .slide2 {
   position: relative;
 }
 
 .slide-about {
   position: absolute;
-  font-family: 'Cuprum',sans-serif;
+  font-family: 'Cuprum', sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
@@ -535,19 +536,20 @@ h1, h2 {
   font-weight: bold;
   text-transform: uppercase;
 }
- .slide-right {
-   position: absolute;
-   left: 578px;
-   top: 114px;
-   z-index: 1;
- }
 
- .slide-left {
-   position: absolute;
-   left: 25px;
-   top: 114px;
-   z-index: 1;
- }
+.slide-right {
+  position: absolute;
+  left: 578px;
+  top: 114px;
+  z-index: 1;
+}
+
+.slide-left {
+  position: absolute;
+  left: 25px;
+  top: 114px;
+  z-index: 1;
+}
 
 .slide-right:hover,
 .slide-left:hover {
@@ -562,7 +564,6 @@ h1, h2 {
   top: 206px;
   z-index: 1;
 }
-
 
 .popular-section {
   width: 940px;
@@ -688,11 +689,13 @@ h1, h2 {
   padding: 0;
   background: url('img/delivery-icon.png') no-repeat bottom right;
 }
+
 /*картинка выходит за пределы блока  */
 .guarantee-icon {
   padding: 0;
   background: url('img/guarantee-icon.png') no-repeat bottom right;
 }
+
 .credit-icon {
   padding: 0;
   background: url('img/credit-icon.png') no-repeat bottom right;
@@ -734,20 +737,25 @@ h1, h2 {
   box-shadow: inset -4px 2px 3px rgba(41, 52, 73, 1);
   border: 1px solid #405069;
 }
+
 .service-list li:hover,
 .service-list li:active,
 .service-list li:focus {
   background-color: #ffffff;
   color: #32425c;
-  box-shadow: inset -4px 2px 3px #ffffff;
+  box-shadow: none;
   border: #ffffff;
+  cursor: pointer;
 }
+
 .delivery {
   display: block;
 }
+
 .guarantee {
   display: none;
 }
+
 .credit {
   display: none;
 }
@@ -925,10 +933,13 @@ h1, h2 {
 }
 
 @keyframes modal {
-from {
-  top: 0%; }
-to {
-  top: 50%; }
+  from {
+    top: 0%;
+  }
+
+  to {
+    top: 50%;
+  }
 }
 
 .underline-orders {
@@ -1766,7 +1777,7 @@ ul .sorting-active {
 .some-words {
   width: 940px;
   margin: 0 auto;
-  padding: 68px 0;
+  padding: 67px 0;
 }
 
 .some-words-title {
@@ -1774,7 +1785,7 @@ ul .sorting-active {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
-  margin-bottom: 34px;
+  margin-bottom: 25px;
   color: #000000;
 }
 
@@ -1975,10 +1986,37 @@ ul .sorting-active {
   margin-left: 80px;
 }
 
+.range-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f3ec;
+  height: 80px;
+  margin: 8px 0;
+  border-radius: 3px;
+}
+
+.price-diap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 17px;
+}
+
+.price-field {
+  width: 95px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f3ec;
+  margin: 8px 0;
+  border-radius: 3px;
+}
+
 input[type=range] {
   -webkit-appearance: none;
-  margin: 18px 0;
-  width: 100%;
+  width: 176px;
 }
 
 input[type=range]:focus {
@@ -1987,78 +2025,69 @@ input[type=range]:focus {
 
 input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
-  height: 8.4px;
+  height: 2px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
+  background: #d7dcde;
 }
 
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  box-shadow: 0 2px 0 0 #e0ddd8;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -14px;
+  margin-top: -10px;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #367ebd;
-}
+/* input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #00ca74;
+} */
 
 input[type=range]::-moz-range-track {
   width: 100%;
-  height: 8.4px;
+  height: 2px;
   cursor: pointer;
   animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  background: #3071a9;
-  border-radius: 1.3px;
-  border: 0.2px solid #010101;
+  background: #d7dcde;
 }
 
 input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
+  box-shadow: 0 2px 0 0  #e0ddd8;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -10px;
 }
 
-input[type=range]::-ms-track {
+/* input[type=range]::-ms-track {
   width: 100%;
-  height: 8.4px;
+  height: 2px;
   cursor: pointer;
   animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent;
-}
+  background: #d7dcde;
+} */
 
-input[type=range]::-ms-fill-lower {
-  background: #2a6495;
-  border: 0.2px solid #010101;
+/* input[type=range]::-ms-fill-lower {
+  background: #000000;
+  border: 0.5px solid #000000;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
+} */
 
-input[type=range]::-ms-fill-upper {
+/* input[type=range]::-ms-fill-upper {
   background: #3071a9;
   border: 0.2px solid #010101;
   border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
 }
 
-input[type=range]::-ms-thumb {
+/* input[type=range]::-ms-thumb {
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   border: 1px solid #000000;
   height: 36px;
@@ -2066,315 +2095,12 @@ input[type=range]::-ms-thumb {
   border-radius: 3px;
   background: #ffffff;
   cursor: pointer;
-}
+} */
 
-input[type=range]:focus::-ms-fill-lower {
+/* input[type=range]:focus::-ms-fill-lower {
   background: #3071a9;
 }
 
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
-}
-
-/*slider
-    /* стили для элемента body
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      color: #fff;
-      height: 3000px;
-    }
-
-    /* стили основного контейнера слайдера
-    .slider {
-      position: relative;
-      overflow: hidden;
-      width: 620px;
-      height: 266px;
-
-    }
-
-    /* стили для обёртки, в которой заключены слайды
-    .slider__wrapper {
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* стили для контейнера слайдов
-    .slider__items {
-      display: flex;
-      transition: transform 0.6s ease;
-    }
-
-    /* стили для слайдов
-    .slider__item {
-      flex: 0 0 100%;
-      max-width: 100%;
-    }
-
-    /* стили для кнопок "вперед" и "назад"
-    .slider__control {
-      position: absolute;
-      top: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 22px;
-      color: #fff;
-      text-align: center;
-      height: 40px;
-      transform: translateY(-50%);
-    }
-
-    .slider__control:hover,
-    .slider__control:focus {
-      outline: none;
-    }
-
-    .slider__control_prev {
-      left: 24px;
-    }
-
-    .slider__control_next {
-      right: 24px;
-    }
-
-    .slider__control::before {
-      content: '';
-      display: inline-block;
-      width: 22px;
-      height: 40px;
-      background: transparent no-repeat center center;
-      background-size: 100% 100%;
-    }
-
-    .slider__control_prev::before {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-    }
-
-    .slider__control_next::before {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-    }
-
-  стили для индикаторов
-    .slider__indicators {
-      position: absolute;
-      right: 0;
-      bottom: 36px;
-      left: 0;
-      z-index: 15;
-      display: flex;
-      justify-content: center;
-      padding-left: 0;
-      list-style: none;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    .slider__indicators li {
-      box-sizing: content-box;
-      flex: 0 1 auto;
-      width: 10px;
-      height: 10px;
-      margin-right: 3px;
-      margin-left: 3px;
-      cursor: pointer;
-      background-color: rgba(255, 255, 255, 0.5);
-      background-clip: padding-box;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-    }
-
-    .slider__indicators li.active {
-      background-color: #fff;
-    }
-
-    .img-fluid {
-      display: inline-block;
-      height: auto;
-      max-width: 100%;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="slider">
-    <div class="slider__wrapper">
-      <div class="slider__items">
-        <div class="slider__item">
-          <img class="img-fluid" src="/examples/images/c1.jpg" alt="c1">
-        </div>
-        <div class="slider__item">
-          <img class="img-fluid" src="/examples/images/c2.jpg" alt="c2">
-        </div>
-      </div>
-    </div>
-    <a class="slider__control slider__control_prev" href="#" role="button"></a>
-    <a class="slider__control slider__control_next slider__control_show" href="#" role="button"></a>
-  </div>
-
-  <script>
-    'use strict';
-    var slideShow = (function () {
-      return function (selector, config) {
-        var
-          _slider = document.querySelector(selector), // основный элемент блока
-          _sliderContainer = _slider.querySelector('.slider__items'), // контейнер для .slider-item
-          _sliderItems = _slider.querySelectorAll('.slider__item'), // коллекция .slider-item
-          _sliderControls = _slider.querySelectorAll('.slider__control'), // элементы управления
-          _currentPosition = 0, // позиция левого активного элемента
-          _transformValue = 0, // значение транфсофрмации .slider_wrapper
-          _transformStep = 100, // величина шага (для трансформации)
-          _itemsArray = [], // массив элементов
-          _timerId,
-          _indicatorItems,
-          _indicatorIndex = 0,
-          _indicatorIndexMax = _sliderItems.length - 1,
-          _config = {
-            isAutoplay: false, // автоматическая смена слайдов
-            directionAutoplay: 'next', // направление смены слайдов
-            delayAutoplay: 5000, // интервал между автоматической сменой слайдов
-            isPauseOnHover: true // устанавливать ли паузу при поднесении курсора к слайдеру
-          };
-
-
-
-        // наполнение массива _itemsArray
-        for (var i = 0; i < _sliderItems.length; i++) {
-          _itemsArray.push({ item: _sliderItems[i], position: i, transform: 0 });
-        }
-
-        // переменная position содержит методы с помощью которой можно получить минимальный и максимальный индекс элемента, а также соответствующему этому индексу позицию
-        var position = {
-          getItemIndex: function (mode) {
-            var index = 0;
-            for (var i = 0; i < _itemsArray.length; i++) {
-              if ((_itemsArray[i].position < _itemsArray[index].position && mode === 'min') || (_itemsArray[i].position > _itemsArray[index].position && mode === 'max')) {
-                index = i;
-              }
-            }
-            return index;
-          },
-          getItemPosition: function (mode) {
-            return _itemsArray[position.getItemIndex(mode)].position;
-          }
-        };
-
-        // функция, выполняющая смену слайда в указанном направлении
-        var _move = function (direction) {
-          var nextItem, currentIndicator = _indicatorIndex;;
-          if (direction === 'next') {
-            _currentPosition++;
-            if (_currentPosition > position.getItemPosition('max')) {
-              nextItem = position.getItemIndex('min');
-              _itemsArray[nextItem].position = position.getItemPosition('max') + 1;
-              _itemsArray[nextItem].transform += _itemsArray.length * 100;
-              _itemsArray[nextItem].item.style.transform = 'translateX(' + _itemsArray[nextItem].transform + '%)';
-            }
-            _transformValue -= _transformStep;
-            _indicatorIndex = _indicatorIndex + 1;
-            if (_indicatorIndex > _indicatorIndexMax) {
-              _indicatorIndex = 0;
-            }
-          } else {
-            _currentPosition--;
-            if (_currentPosition < position.getItemPosition('min')) {
-              nextItem = position.getItemIndex('max');
-              _itemsArray[nextItem].position = position.getItemPosition('min') - 1;
-              _itemsArray[nextItem].transform -= _itemsArray.length * 100;
-              _itemsArray[nextItem].item.style.transform = 'translateX(' + _itemsArray[nextItem].transform + '%)';
-            }
-            _transformValue += _transformStep;
-            _indicatorIndex = _indicatorIndex - 1;
-            if (_indicatorIndex < 0) {
-              _indicatorIndex = _indicatorIndexMax;
-            }
-          }
-          _sliderContainer.style.transform = 'translateX(' + _transformValue + '%)';
-          _indicatorItems[currentIndicator].classList.remove('active');
-          _indicatorItems[_indicatorIndex].classList.add('active');
-        };
-
-        // функция, осуществляющая переход к слайду по его порядковому номеру
-        var _moveTo = function (index) {
-          var i = 0, direction = (index > _indicatorIndex) ? 'next' : 'prev';
-          while (index !== _indicatorIndex && i <= _indicatorIndexMax) {
-            _move(direction);
-            i++;
-          }
-        };
-
-
-        // функция, добавляющая индикаторы к слайдеру
-        var _addIndicators = function () {
-          var indicatorsContainer = document.createElement('ol');
-          indicatorsContainer.classList.add('slider__indicators');
-          for (var i = 0; i < _sliderItems.length; i++) {
-            var sliderIndicatorsItem = document.createElement('li');
-            if (i === 0) {
-              sliderIndicatorsItem.classList.add('active');
-            }
-            sliderIndicatorsItem.setAttribute("data-slide-to", i);
-            indicatorsContainer.appendChild(sliderIndicatorsItem);
-          }
-          _slider.appendChild(indicatorsContainer);
-          _indicatorItems = _slider.querySelectorAll('.slider__indicators > li')
-        };
-
-        // функция, осуществляющая установку обработчиков для событий
-        var _setUpListeners = function () {
-          _slider.addEventListener('click', function (e) {
-            if (e.target.classList.contains('slider__control')) {
-              e.preventDefault();
-              _move(e.target.classList.contains('slider__control_next') ? 'next' : 'prev');
-              _startAutoplay();
-            } else if (e.target.getAttribute('data-slide-to')) {
-              e.preventDefault();
-              _moveTo(parseInt(e.target.getAttribute('data-slide-to')));
-              _startAutoplay();
-            }
-          });
-          document.addEventListener('visibilitychange', function () {
-            if (document.visibilityState === "hidden") {
-              _stopAutoplay();
-            } else {
-              _startAutoplay();
-            }
-          }, false);
-          if (_config.isPauseOnHover && _config.isAutoplay) {
-            _slider.addEventListener('mouseenter', function () {
-              _stopAutoplay();
-            });
-            _slider.addEventListener('mouseleave', function () {
-              _startAutoplay();
-            });
-          }
-        };
-
-        // добавляем индикаторы к слайдеру
-        _addIndicators();
-        // установливаем обработчики для событий
-        _setUpListeners();
-
-        return {
-          // метод слайдера для перехода к следующему слайду
-          next: function () {
-            _move('next');
-          },
-          // метод слайдера для перехода к предыдущему слайду
-          left: function () {
-            _move('prev');
-          }
-
-
-        }
-      }
-    }());
-
-    slideShow('.slider', {
-      isAutoplay: true
-    });
-  </script>
-
-             */
+} */

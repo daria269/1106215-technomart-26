@@ -103,7 +103,12 @@ function showDelivery () {
   background.classList.remove('guarantee-icon');
   background.classList.remove('credit-icon');
   background.classList.add('delivery-icon');
-
+  deliveryBtn.style.backgroundColor = '#ffffff';
+  deliveryBtn.style.color = '#32425c';
+  deliveryBtn.style.boxShadow = 'none';
+  deliveryBtn.style.border = '#ffffff';
+  guarantBtn.style = 'none';
+  creditBtn.style = 'none';
 }
 
 function showGuarant () {
@@ -114,6 +119,12 @@ function showGuarant () {
   background.classList.remove('delivery-icon');
   background.classList.remove('credit-icon');
   background.classList.add('guarantee-icon');
+  guarantBtn.style.backgroundColor = '#ffffff';
+  guarantBtn.style.color = '#32425c';
+  guarantBtn.style.boxShadow = 'none';
+  guarantBtn.style.border = '#ffffff';
+  deliveryBtn.style = 'none';
+  creditBtn.style = 'none';
 }
 
 function showCredit () {
@@ -124,4 +135,10 @@ function showCredit () {
   background.classList.remove('delivery-icon');
   background.classList.add('credit-icon');
   background.classList.remove('guarantee-icon');
+  creditBtn.style.backgroundColor = '#ffffff';
+  creditBtn.style.color = '#32425c';
+  creditBtn.style.boxShadow = 'none';
+  creditBtn.style.border = '#ffffff';
+  deliveryBtn.style = 'none';
+  guarantBtn.style = 'none';
 }
