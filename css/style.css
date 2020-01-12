@@ -507,13 +507,11 @@ h1, h2 {
   width: 1240px;
   position: relative;
   left: 0;
-  transition: all ease 1s;
   display: flex;
 }
 
 .slide1 {
   position: relative;
-  transition: all ease 1s;
 }
 
 .slide2 {
@@ -750,16 +748,30 @@ h1, h2 {
 
 .delivery {
   display: block;
+  animation: appear 1s;
 }
 
 .guarantee {
   display: none;
+  animation: appear 1s;
 }
 
 .credit {
   display: none;
+  animation: appear 1s;
 }
 
+@keyframes appear {
+  0% {
+    transform: scale(0.1, 1)
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/////
 .divMap:hover {
   cursor: pointer;
 }
@@ -2045,7 +2057,6 @@ input[type=range]::-webkit-slider-thumb {
 /* input[type=range]:focus::-webkit-slider-runnable-track {
   background: #00ca74;
 } */
-
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 2px;
@@ -2055,7 +2066,7 @@ input[type=range]::-moz-range-track {
 }
 
 input[type=range]::-moz-range-thumb {
-  box-shadow: 0 2px 0 0  #e0ddd8;
+  box-shadow: 0 2px 0 0 #e0ddd8;
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -2072,14 +2083,12 @@ input[type=range]::-moz-range-thumb {
   animate: 0.2s;
   background: #d7dcde;
 } */
-
 /* input[type=range]::-ms-fill-lower {
   background: #000000;
   border: 0.5px solid #000000;
   border-radius: 2.6px;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 } */
-
 /* input[type=range]::-ms-fill-upper {
   background: #3071a9;
   border: 0.2px solid #010101;
@@ -2096,7 +2105,6 @@ input[type=range]::-moz-range-thumb {
   background: #ffffff;
   cursor: pointer;
 } */
-
 /* input[type=range]:focus::-ms-fill-lower {
   background: #3071a9;
 }

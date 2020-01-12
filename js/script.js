@@ -56,14 +56,14 @@ rightButton.onclick = moveRight;
  function moveRight (){
 	let element = document.querySelector(".slider-field>div:first-child");
   sliderField.appendChild(element);
+
 }
 function moveLeft (){
 	let element = document.querySelector(".slider-field>div:last-child"),
   	firstElement = document.querySelector(".slider-field>div:first-child");
 	sliderField.insertBefore(element, firstElement);
-  element.style.transition = 'all ease 1s';
 }
-sliderField.style.transition = 'left 0.6s ease';
+// sliderField.style.transition = 'left 0.6s ease';
 
 
 //
@@ -125,6 +125,7 @@ function showGuarant () {
   guarantBtn.style.border = '#ffffff';
   deliveryBtn.style = 'none';
   creditBtn.style = 'none';
+
 }
 
 function showCredit () {
