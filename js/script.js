@@ -1,3 +1,4 @@
+"use strict";
 /* var buypopup = document.querySelector('.modal-cart');
 var close =document.querySelector('.close-button');
 
@@ -53,15 +54,19 @@ let frame = 620;
 leftButton.onclick = moveLeft;
 rightButton.onclick = moveRight;
 
- function moveRight (){
-	let element = document.querySelector(".slider-field>div:first-child");
+function moveRight() {
+  let element = document.querySelector(".slider-field>div:first-child");
   sliderField.appendChild(element);
+  element.classList.add('coming');
+
 
 }
-function moveLeft (){
-	let element = document.querySelector(".slider-field>div:last-child"),
-  	firstElement = document.querySelector(".slider-field>div:first-child");
-	sliderField.insertBefore(element, firstElement);
+
+function moveLeft() {
+  let element = document.querySelector(".slider-field>div:last-child"),
+    firstElement = document.querySelector(".slider-field>div:first-child");
+  sliderField.insertBefore(element, firstElement);
+  firstElement, element.classList.add('leave');
 }
 // sliderField.style.transition = 'left 0.6s ease';
 
@@ -96,7 +101,7 @@ deliveryBtn.onclick = showDelivery;
 guarantBtn.onclick = showGuarant;
 creditBtn.onclick = showCredit;
 
-function showDelivery () {
+function showDelivery() {
   guarantDiv.style.display = 'none';
   creditDiv.style.display = 'none';
   deliveryDiv.style.display = 'block';
@@ -111,7 +116,7 @@ function showDelivery () {
   creditBtn.style = 'none';
 }
 
-function showGuarant () {
+function showGuarant() {
 
   deliveryDiv.style.display = 'none';
   creditDiv.style.display = 'none';
@@ -128,7 +133,7 @@ function showGuarant () {
 
 }
 
-function showCredit () {
+function showCredit() {
 
   deliveryDiv.style.display = 'none';
   guarantDiv.style.display = 'none';
@@ -143,3 +148,20 @@ function showCredit () {
   deliveryBtn.style = 'none';
   guarantBtn.style = 'none';
 }
+
+
+
+$(function() {
+  $("#slider-range").slider({
+    range: true,
+    min: 0,
+    max: 30000,
+    values: [10000, 20000],
+    slide: function(event, ui) {
+      $("#amount1").val(ui.values[0]);
+      $("#amount2").val(ui.values[1]);
+    }
+  });
+  $("#amount1").val($("#slider-range").slider("values", 0));
+  $("#amount2").val($("#slider-range").slider("values", 1));
+});
