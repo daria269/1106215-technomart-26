@@ -12,22 +12,33 @@ close.addEventListener('click', function (evt) {
   buypopup.classList.remove('modal-cart-show');
 })
 */
+
+
 let mapMini = document.querySelector('.map-mini');
 let mapOpen = document.querySelector('.map-open');
 
+if (mapOpen !== null) {
 mapOpen.onclick = function() {
   mapMini.style.overflow = 'visible';
 };
+};
+
 let closeMap = document.querySelector('.close-map');
+
+if (closeMap !== null) {
 closeMap.onclick = function() {
   mapMini.style.overflow = 'hidden';
   console.log('нажата');
 };
+};
 
 let modal = document.querySelector('.modal');
 let writeBtn = document.querySelector('.long-button');
+
+if (writeBtn !== null) {
 writeBtn.onclick = function() {
   modal.style.display = 'block';
+};
 };
 
 let closeModal = document.querySelector('.close-button');
@@ -51,8 +62,13 @@ let slide2 = document.querySelector('.slide2');
 let left = 0;
 let frame = 620;
 
+if (leftButton !== null) {
 leftButton.onclick = moveLeft;
+};
+
+if (rightButton !== null) {
 rightButton.onclick = moveRight;
+};
 
 function moveRight() {
   let element = document.querySelector(".slider-field>div:first-child");
@@ -97,9 +113,17 @@ let creditDiv = document.querySelector('.credit');
 
 let background = document.querySelector('.service-detail');
 
+
+if (deliveryBtn !== null) {
 deliveryBtn.onclick = showDelivery;
+};
+if (guarantBtn !== null) {
 guarantBtn.onclick = showGuarant;
+};
+if (creditBtn !== null) {
 creditBtn.onclick = showCredit;
+};
+
 
 function showDelivery() {
   guarantDiv.style.display = 'none';
@@ -150,13 +174,12 @@ function showCredit() {
 }
 
 
-
 $(function() {
   $("#slider-range").slider({
     range: true,
     min: 0,
-    max: 30000,
-    values: [10000, 20000],
+    max: 35000,
+    values: [0, 30000],
     slide: function(event, ui) {
       $("#amount1").val(ui.values[0]);
       $("#amount2").val(ui.values[1]);

@@ -968,6 +968,7 @@ h1, h2 {
 .button-send {
   width: 460px;
   margin: 0;
+
 }
 
 @keyframes modal {
@@ -2057,9 +2058,45 @@ ul .sorting-active {
   margin-bottom: 25px;
 }
 
-input[type="text"]  {
+#amount1, #amount2  {
   width: 95px;
   height: 38px;
   background: #f7f3ec;
   border: none;
+  text-align: center;
+  cursor: default;
+}
+
+#amount1:focus,
+#amount2:focus {
+  outline: none;
+}
+
+#slider-range {
+  width: 180px;
+  height: 2px;
+  background-color: #d7dcde;
+  border: none;
+}
+
+#slider-range .ui-widget-header {
+  background-color: #00ca74;
+}
+
+
+#slider-range .ui-slider-handle {
+    width: 20px;
+    height: 20px;
+  border-radius:50%;
+  border:none;
+  background-color: #fff;
+  box-shadow: inset 0px -2px 0 0 #e0ddd8;
+  top: -0.5em;
+  cursor: pointer;
+}
+
+
+#slider-range .ui-slider-handle:active,
+#slider-range .ui-slider-handle:focus {
+  outline: none;
 }
