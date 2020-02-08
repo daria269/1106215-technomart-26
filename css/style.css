@@ -567,6 +567,8 @@ h1, h2 {
   left: 578px;
   top: 114px;
   z-index: 1;
+  border: none;
+  background: transparent;
 }
 
 .slide-left {
@@ -574,12 +576,17 @@ h1, h2 {
   left: 25px;
   top: 114px;
   z-index: 1;
+  border: none;
+  background: transparent;
 }
 
 .slide-right:hover,
-.slide-left:hover {
+.slide-left:hover,
+.slide-left:active,
+.slide-right:active {
   cursor: pointer;
   opacity: 0.7;
+  outline: none;
 }
 
 .slider-button {
@@ -635,6 +642,7 @@ h1, h2 {
   align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 20px;
+  padding-left: 0;
 }
 
 .company-card {
